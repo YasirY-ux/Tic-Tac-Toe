@@ -1,74 +1,81 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  
-  body {
-    background-color: #f68dd0;
-    text-align: center;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-  main{
-    background: rgba(255, 255, 255, 0.548);
-    width: 500px;
-    height: 550px;
-    border-radius: 5px;
-    padding: 20px;
-  }
-  
-  .container {
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .game {
-    height: 60vmin;
-    width: 60vmin;
-    gap: 1.5vmin;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .box {
-    height: 18vmin;
-    width: 18vmin;
-    border-radius: 1rem;
-    border: none;
-    font-size: 8vmin;
-    background-color: white;
-    box-shadow: 0 0 0.3rem black;
-    color: #ff0000;
-    cursor: pointer;
-  }
-  
-  .box:disabled{
-    cursor: default;
-  }
+body {
+  background: linear-gradient(140deg, #f5a623, #4a90e2);
+  text-align: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  #reset-game {
-    width: 60vmin;
-    height: 8vmin;
-    font-size: 4vmin;
-    border-radius: 5px;
-    border: 1px solid black; 
-    padding: 0.5rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.74);
-    box-shadow: 0 0 0.3px black;
-    cursor: pointer;
-  }
+main {
+  background: #ffffffa9;
+  width: 350px;
+  height: 400px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: none;
+}
+
+.box {
+  height: 80px;
+  width: 80px;
+  background: transparent;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+.box:nth-child(1),.box:nth-child(2),.box:nth-child(4),.box:nth-child(5){
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.box:nth-child(3),.box:nth-child(6){
+  border-bottom: 2px solid black;;
+}
+.box:nth-child(7),.box:nth-child(8){
+  border-right: 2px solid black;;
+}
+
+#reset-game {
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #4a90e2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
   
   .msg {
     font-size: 50px;
@@ -96,31 +103,30 @@
   .in {
     width: 400px;
     height: 200px;
-    background: rgba(125, 0, 198, 0.82);
+    background: rgba(255, 255, 255, 0.938);
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     border-radius: 1rem;
-    box-shadow: 0 0 0.5rem black; 
   }
 
   .in h2{
-    font-weight: 900;
+    font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px;
-    color: white;
+    font-size: 35px;
+    color: black;
   }
   
   #play-again {
-    width: 60vmin;
-    height: 8vmin;
-    font-size: 4vmin;
+    margin-top: 20px;
+    width: 90%;
+    height: 40px;
+    font-size: 18px;
     border-radius: 5px;
-    border: 1px solid black; 
-    padding: 0.5rem;
+    border: none;
     color: white;
-    background-color: rgba(0, 0, 0, 0.74);
-    box-shadow: 0 0 0.3px black;
+    background-color: #4a90e2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
   }
